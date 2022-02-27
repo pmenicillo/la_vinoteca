@@ -1,0 +1,352 @@
+* { 
+    padding:0;
+    margin:0;
+ }
+
+ main{
+    color: white;
+    background-color: #4c1130;
+    font-family: 'Lato', sans-serif;
+}
+
+/*Header y footer*/
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 115px;
+    font-family: 'Lato', sans-serif; 
+    background-color: #a64d79;
+    color: #ffd966;
+}
+
+.logo{
+    margin-left: 10px;
+    margin-right: 0px;
+}
+
+.logopng{
+    width: 80px;
+}
+
+.menuHeader ul{  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuHeader ul li{ 
+    list-style: none;
+    margin: 0px 12px; 
+}
+
+.menuHeader ul li a{ 
+    text-decoration: none; 
+    color: #ffd966;
+}
+
+.menuHeader ul li a:hover{ 
+    color: #4c1130;
+}
+
+.titleMenu{
+    display: flex;
+    margin-left: 0;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    font-family: 'Lato', sans-serif; 
+    background-color: #a64d79;
+    color: #ffd966;
+    height: 60px;
+}
+
+.footerText{
+    display: flex;
+    margin-right: 60px;
+}
+
+/*Main*/
+
+section{
+    padding: 5%;
+}
+
+/*Index*/
+
+.homeSectionTop{
+    display:flex;
+    flex-direction: row;
+}
+
+.homeImg, .divMain{
+    width: 45%;
+    height: fit-content;
+    padding: 5px;
+}
+
+.homeSectionBottom{
+    display: flex;
+    justify-content: right;
+}
+
+.homeImgBottom{
+    width: 75%;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+/*Catalog*/
+
+.gridCatalog{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "titulo titulo titulo"
+                         "vino1 vino2 vino3"
+                         "vino4 vino5 vino6"
+                         "vino7 vino8 vino9"
+                         "vino10 vino11 vino12";
+    justify-items: center;
+    gap: 20px;
+}
+
+.titleCatalog{
+    grid-area: titulo;
+    text-align: center;
+    margin: 20px;
+}
+
+.proximosIngresos{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5%;
+}
+
+.proximosIngresos img{
+    width: 100%;
+    padding-top: 5%;
+}
+
+.card{
+    display:flex;
+    flex-direction: column;
+    width: 75%; 
+    text-align: center;
+}
+
+.card img{
+    display: flex;
+    width: 100%;
+}
+
+.vino1{
+    grid-area: vino1;
+}
+.vino2{
+    grid-area: vino2;
+}
+.vino3{
+    grid-area: vino3;
+}
+.vino4{
+    grid-area: vino4;
+}
+.vino5{
+    grid-area: vino5;
+}
+.vino6{
+    grid-area: vino6;
+}
+.vino7{
+    grid-area: vino7;
+}
+.vino8{
+    grid-area: vino8;
+}
+.vino9{
+    grid-area: vino9;
+}
+.vino10{
+    grid-area: vino10;
+}
+.vino11{
+    grid-area: vino11;
+}
+.vino12{
+    grid-area: vino12;
+}
+
+.buyButton{
+    background-color: #a64d79;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;    
+}
+
+/*Nosotros*/
+
+.usSectionTop, .usSectionBottom{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.usSectionTop img{
+    width: 60%;
+    padding-top: 20px;
+}
+
+.usSectionBottom iframe{
+    width: 60%;
+    padding-top: 20px;
+}
+
+/*Contacto*/
+
+.contactTitle{
+    padding-top: 1rem;
+    padding-left: 5%;
+}
+
+.contactSectionTop{
+    display: flex;
+    flex-direction: row;
+}
+
+.contactDirection{
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+}
+
+.contactSectionBottom form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+/*Carrito*/
+
+.shopSectionTop form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.shopSectionBottom{
+    text-align: center;
+}
+
+.shopSectionBottom img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 1rem;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 768px) {
+
+    .gridCatalog{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "titulo titulo"
+                             "vino1 vino2"
+                             "vino3 vino4"
+                             "vino5 vino6"
+                             "vino7 vino8"
+                             "vino9 vino10"
+                             "vino11 vino12";
+        justify-items: center;
+        gap: 20px;
+    }
+
+    .menuHeader ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: small;
+    }
+
+    .homeSectionTop, .homeSectionBottom{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: small;
+    }
+
+    .homeImg, .divMain{
+        width: 100%;
+    }
+
+    .contactDirection{
+        padding-right: 2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+        .gridCatalog{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas: "titulo"
+                                 "vino1"
+                                 "vino2"
+                                 "vino3"
+                                 "vino4"
+                                 "vino5"
+                                 "vino6"
+                                 "vino7"
+                                 "vino8"
+                                 "vino9"
+                                 "vino10"
+                                 "vino11"
+                                 "vino12";
+            justify-items: center;
+            gap: 20px;
+        }
+   
+        header{
+            height: 100%;
+        }
+
+        .menuHeader{
+            display: flex;
+            margin-top: 5%;
+            margin-right: 5%;
+        }
+
+        .menuHeader ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+        }
+        .homeSectionTop, .homeSectionBottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: smaller;
+        }
+    }    
+
+}
