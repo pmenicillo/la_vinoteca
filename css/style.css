@@ -25,11 +25,18 @@ header{
 .logo{
     margin-left: 10px;
     margin-right: 0px;
+    transition: all 1s;
+}
+
+.logo:hover{ 
+    transform: rotate(35deg);
 }
 
 .logopng{
     width: 80px;
 }
+
+
 
 .menuHeader ul{  
     display: flex;
@@ -92,6 +99,11 @@ section{
     padding: 5px;
 }
 
+.homeImgBottom:hover{ 
+    transform: translate(-120px);
+    transition: all .5s;
+}
+
 .homeSectionBottom{
     display: flex;
     justify-content: right;
@@ -136,6 +148,10 @@ section{
     padding-top: 5%;
 }
 
+.proximosIngresos:hover{
+    filter: grayscale(1)
+}
+
 .card{
     display:flex;
     flex-direction: column;
@@ -146,6 +162,11 @@ section{
 .card img{
     display: flex;
     width: 100%;
+}
+
+.card img:hover{ 
+    transform: scale(0.9,0.9);
+    transition: all .5s;
 }
 
 .vino1{
