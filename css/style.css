@@ -36,28 +36,23 @@ header{
     width: 80px;
 }
 
-
-
-.menuHeader ul{  
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+#navbarNav{
+    height: 30px;
+    text-align: right;
 }
 
-.menuHeader ul li{ 
-    list-style: none;
-    margin: 0px 12px; 
+.navbar-nav, .form{
+    background-color: #a64d79;
 }
 
-.menuHeader ul li a{ 
-    text-decoration: none; 
+#navbarNav ul li a{
     color: #ffd966;
 }
 
-.menuHeader ul li a:hover{ 
-    color: #4c1130;
+#navbarNav ul li a:hover{
+    color: #ffffff;
 }
+
 
 .titleMenu{
     display: flex;
@@ -96,44 +91,22 @@ section{
 .homeImg, .divMain{
     width: 45%;
     height: fit-content;
-    padding: 5px;
-}
-
-.homeImgBottom:hover{ 
-    transform: translate(-120px);
-    transition: all .5s;
-}
-
-.homeSectionBottom{
-    display: flex;
-    justify-content: right;
-}
-
-.homeImgBottom{
-    width: 75%;
-    padding-right: 3rem;
-    padding-bottom: 3rem;
+    padding: 1rem;
 }
 
 
 /*Catalog*/
 
-.gridCatalog{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "titulo titulo titulo"
-                         "vino1 vino2 vino3"
-                         "vino4 vino5 vino6"
-                         "vino7 vino8 vino9"
-                         "vino10 vino11 vino12";
-    justify-items: center;
-    gap: 20px;
-}
-
 .titleCatalog{
     grid-area: titulo;
     text-align: center;
     margin: 20px;
+}
+
+.card{
+    background-color:#a64d79;
+    align-items: center;
+    text-align: center;
 }
 
 .proximosIngresos{
@@ -148,74 +121,18 @@ section{
     padding-top: 5%;
 }
 
-.proximosIngresos:hover{
-    filter: grayscale(1)
+.gridCatalog{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "titulo titulo titulo"
+                         "vino1 vino2 vino3"
+                         "vino4 vino5 vino6"
+                         "vino7 vino8 vino9"
+                         "vino10 vino11 vino12";
+    justify-items: center;
+    gap: 20px;
 }
 
-.card{
-    display:flex;
-    flex-direction: column;
-    width: 75%; 
-    text-align: center;
-}
-
-.card img{
-    display: flex;
-    width: 100%;
-}
-
-.card img:hover{ 
-    transform: scale(0.9,0.9);
-    transition: all .5s;
-}
-
-.vino1{
-    grid-area: vino1;
-}
-.vino2{
-    grid-area: vino2;
-}
-.vino3{
-    grid-area: vino3;
-}
-.vino4{
-    grid-area: vino4;
-}
-.vino5{
-    grid-area: vino5;
-}
-.vino6{
-    grid-area: vino6;
-}
-.vino7{
-    grid-area: vino7;
-}
-.vino8{
-    grid-area: vino8;
-}
-.vino9{
-    grid-area: vino9;
-}
-.vino10{
-    grid-area: vino10;
-}
-.vino11{
-    grid-area: vino11;
-}
-.vino12{
-    grid-area: vino12;
-}
-
-.buyButton{
-    background-color: #a64d79;
-    border-radius: 5px;
-    color: white;
-    padding: 5px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;    
-}
 
 /*Nosotros*/
 
@@ -235,28 +152,19 @@ section{
     padding-top: 20px;
 }
 
+.carousel-inner{
+    height: 600px;
+}
+
 /*Contacto*/
 
 .contactTitle{
-    padding-top: 1rem;
-    padding-left: 5%;
+    padding-top: 2rem;
+    text-align: center;
 }
 
-.contactSectionTop{
-    display: flex;
-    flex-direction: row;
-}
-
-.contactDirection{
-    display: flex;
-    flex-direction: column;
-    padding-left: 3rem;
-}
-
-.contactSectionBottom form{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
+.map{
+    max-width: 100%;
 }
 
 /*Carrito*/
@@ -281,6 +189,10 @@ section{
     padding-top: 1rem;
 }
 
+
+.accordion{
+    color: black;
+}
 
 /*MEDIA QUERIES*/
 
@@ -344,11 +256,8 @@ section{
             justify-items: center;
             gap: 20px;
         }
-   
-        header{
-            height: 100%;
-        }
-
+        
+        /*
         .menuHeader{
             display: flex;
             margin-top: 5%;
@@ -361,6 +270,7 @@ section{
             justify-content: center;
             align-items: center; 
         }
+        */
         .homeSectionTop, .homeSectionBottom{
             display: flex;
             flex-direction: column;

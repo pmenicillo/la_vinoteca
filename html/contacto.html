@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
@@ -16,37 +18,69 @@
             <img class="logopng" src="../img/logopng.png" alt="logo">
         </div>
         <h1 class="animate__animated animate__backInLeft" class="titleMenu">LA VINOTECA</h1>
-        <nav class="menuHeader">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="catalogo.html">Catalogo</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="carrito.html">Carrito</a></li>
-                    <li>Buscar:<input type="search"></li> <!--Barra de busqueda para los productos-->
-                </ul>            
-        </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-seccondary">
+            <div class="container-fluid">                 
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="catalogo.html">Catalogo</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="nosotros.html">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="carrito.html">Carrito</a>
+                </ul>
+                <form class="d-flex form"> 
+                    <input class="form-control me-2" type="Bus" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-warning" type="submit">Ir</button>
+                  </form>
+              </div>
+            </div>
+          </nav>
     </header>
 
     <main>
         <h2 class="contactTitle">Nuestro local</h2>
-        <section class="contactSectionTop">           
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.7637684695096!2d-58.42868568482062!3d-34.58484348046431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb585d027ef69%3A0x4d292d8f07a9e6d2!2sMALAMBO%20-%20Vinoteca%20y%20Almac%C3%A9n%20Criollo!5e0!3m2!1ses-419!2sar!4v1643430238658!5m2!1ses-419!2sar" width="550" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            <div class="contactDirection">
-                <p>Dirección: Thames 2098</p>
-                <p>Horarios: Lunes a Sabados 10 a 19hs</p>
-                <p>mail: lavinoteca@gmail.com</p>
-                <p>Whatsapp: 1155224411</p>
+        <section class="container">
+            <div class="row">          
+                <div class="col-8">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.7637684695096!2d-58.42868568482062!3d-34.58484348046431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb585d027ef69%3A0x4d292d8f07a9e6d2!2sMALAMBO%20-%20Vinoteca%20y%20Almac%C3%A9n%20Criollo!5e0!3m2!1ses-419!2sar!4v1643430238658!5m2!1ses-419!2sar" width="550" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="col-4">
+                    <p>Dirección: Thames 2098</p>
+                    <p>Horarios: Lunes a Sabados 10 a 19hs</p>
+                    <p>mail: lavinoteca@gmail.com</p>
+                    <p>Whatsapp: 1155224411</p>
+                </div>
             </div>
         </section>
         <section class="contactSectionBottom">
             <h2>Dejanos tus sugerencias o pedidos:</h2>
-            <form action="">
-                Nombre<input type="text">
-                Mail<input type="text">
-                <textarea name="" id="" cols="20" rows="5"></textarea>
-                <input type="submit">
-            </form>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div>
+            <input class="btn btn-warning" type="submit">
+            </div>
         </section>
     
     </main>
