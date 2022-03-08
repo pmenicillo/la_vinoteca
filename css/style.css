@@ -28,7 +28,7 @@ header{
     transition: all 1s;
 }
 
-.logo:hover{ 
+.logo:hover{ /*animacion para el logo*/
     transform: rotate(35deg);
 }
 
@@ -62,7 +62,7 @@ header{
 footer{
     display: flex;
     flex-direction: row;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
     font-family: 'Lato', sans-serif; 
     background-color: #a64d79;
@@ -73,6 +73,28 @@ footer{
 .footerText{
     display: flex;
     margin-right: 60px;
+}
+
+.footer div a{
+    color: #ffd966;
+    text-decoration: none;
+}
+
+.footer div a:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.icons{
+    display: flex;
+    width: 40%;
+    margin-left: 60px;
+}
+
+.icons a{
+    display: flex;
+    justify-content: space-around;
+    padding-right: 1rem;
 }
 
 /*Main*/
@@ -257,20 +279,6 @@ section{
             gap: 20px;
         }
         
-        /*
-        .menuHeader{
-            display: flex;
-            margin-top: 5%;
-            margin-right: 5%;
-        }
-
-        .menuHeader ul{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center; 
-        }
-        */
         .homeSectionTop, .homeSectionBottom{
             display: flex;
             flex-direction: column;
