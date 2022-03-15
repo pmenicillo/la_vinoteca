@@ -1,0 +1,38 @@
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $fontStyle; 
+    background-color: $SecondColor;
+    color: $FontColor;
+    height: 60px;
+
+    &  div a{
+        color: $FontColor;
+        text-decoration: none;
+    }
+
+    & div a:hover{
+        color: $FontSecondaryColor;
+        text-decoration: none;
+    }
+
+    & .footerText{
+        display: flex;
+        margin-right: 60px;
+    }
+
+    & .icons{
+        display: flex;
+        width: 40%;
+        margin-left: 60px;
+        & a{
+            display: flex;
+            justify-content: space-around;
+            padding-right: 1rem;
+        }
+    }
+
+}
+

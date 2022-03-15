@@ -1,0 +1,47 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 115px;
+    font-family: $fontStyle; 
+    background-color: $SecondColor;
+    color: $FontColor;
+
+    & .logo{
+        margin-left: 10px;
+        margin-right: 0px;
+        transition: all 1s;
+    }
+
+    & .logo:hover{ 
+        transform: rotate(35deg);
+    }
+
+    & .logopng{
+        width: 80px;
+    }
+}
+
+.titleMenu{
+    display: flex;
+    margin-left: 0;
+}
+
+#navbarNav{
+    height: 30px;
+    text-align: right;
+
+    & ul li a{
+        color: $FontColor;
+    }
+
+    & ul li a:hover{
+        color: $FontSecondaryColor;
+    }
+}
+
+.navbar-nav, .form{
+    background-color: $SecondColor;
+}

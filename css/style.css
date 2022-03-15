@@ -1,291 +1,194 @@
-* { 
-    padding:0;
-    margin:0;
- }
-
- main{
-    color: white;
-    background-color: #4c1130;
-    font-family: 'Lato', sans-serif;
-}
-
-/*Header y footer*/
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 115px;
-    font-family: 'Lato', sans-serif; 
-    background-color: #a64d79;
-    color: #ffd966;
-}
-
-.logo{
+/* aca voy a ir poniendo los colores, medidas o cosas que se repiten */
+/*Colours*/
+/*Fonts*/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 115px;
+  font-family: "Lato", sans-serif;
+  background-color: #a64d79;
+  color: #ffd966; }
+  header .logo {
     margin-left: 10px;
     margin-right: 0px;
-    transition: all 1s;
-}
+    transition: all 1s; }
+  header .logo:hover {
+    transform: rotate(35deg); }
+  header .logopng {
+    width: 80px; }
 
-.logo:hover{ /*animacion para el logo*/
-    transform: rotate(35deg);
-}
+.titleMenu {
+  display: flex;
+  margin-left: 0; }
 
-.logopng{
-    width: 80px;
-}
+#navbarNav {
+  height: 30px;
+  text-align: right; }
+  #navbarNav ul li a {
+    color: #ffd966; }
+  #navbarNav ul li a:hover {
+    color: white; }
 
-#navbarNav{
-    height: 30px;
-    text-align: right;
-}
+.navbar-nav, .form {
+  background-color: #a64d79; }
 
-.navbar-nav, .form{
-    background-color: #a64d79;
-}
-
-#navbarNav ul li a{
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  background-color: #a64d79;
+  color: #ffd966;
+  height: 60px; }
+  footer div a {
     color: #ffd966;
-}
-
-#navbarNav ul li a:hover{
-    color: #ffffff;
-}
-
-
-.titleMenu{
+    text-decoration: none; }
+  footer div a:hover {
+    color: white;
+    text-decoration: none; }
+  footer .footerText {
     display: flex;
-    margin-left: 0;
-}
-
-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Lato', sans-serif; 
-    background-color: #a64d79;
-    color: #ffd966;
-    height: 60px;
-}
-
-.footerText{
-    display: flex;
-    margin-right: 60px;
-}
-
-.footer div a{
-    color: #ffd966;
-    text-decoration: none;
-}
-
-.footer div a:hover{
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.icons{
+    margin-right: 60px; }
+  footer .icons {
     display: flex;
     width: 40%;
-    margin-left: 60px;
-}
+    margin-left: 60px; }
+    footer .icons a {
+      display: flex;
+      justify-content: space-around;
+      padding-right: 1rem; }
 
-.icons a{
-    display: flex;
-    justify-content: space-around;
-    padding-right: 1rem;
-}
+* {
+  padding: 0;
+  margin: 0; }
+
+main {
+  color: white;
+  background-color: #4c1130;
+  font-family: "Lato", sans-serif; }
 
 /*Main*/
-
-section{
-    padding: 5%;
-}
+section {
+  padding: 5%; }
 
 /*Index*/
-
-.homeSectionTop{
-    display:flex;
-    flex-direction: row;
-}
-
-.homeImg, .divMain{
+.homeSectionTop {
+  display: flex;
+  flex-direction: row; }
+  .homeSectionTop .homeImg, .homeSectionTop .divMain {
     width: 45%;
     height: fit-content;
-    padding: 1rem;
-}
-
+    padding: 1rem; }
 
 /*Catalog*/
-
-.titleCatalog{
+.gridCatalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "titulo titulo titulo" "vino1 vino2 vino3" "vino4 vino5 vino6" "vino7 vino8 vino9" "vino10 vino11 vino12";
+  justify-items: center;
+  gap: 20px; }
+  .gridCatalog .titleCatalog {
     grid-area: titulo;
     text-align: center;
-    margin: 20px;
-}
-
-.card{
-    background-color:#a64d79;
+    margin: 20px; }
+  .gridCatalog .card {
+    background-color: #a64d79;
     align-items: center;
-    text-align: center;
-}
+    text-align: center; }
 
-.proximosIngresos{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 5%;
-}
-
-.proximosIngresos img{
+.proximosIngresos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5%; }
+  .proximosIngresos .proximosIngresos img {
     width: 100%;
-    padding-top: 5%;
-}
-
-.gridCatalog{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "titulo titulo titulo"
-                         "vino1 vino2 vino3"
-                         "vino4 vino5 vino6"
-                         "vino7 vino8 vino9"
-                         "vino10 vino11 vino12";
-    justify-items: center;
-    gap: 20px;
-}
-
+    padding-top: 5%; }
 
 /*Nosotros*/
+.usSectionTop, .usSectionBottom {
+  display: flex;
+  flex-direction: column;
+  padding: 5%; }
 
-.usSectionTop, .usSectionBottom{
-    display: flex;
-    flex-direction: column;
-    padding: 5%;
-}
+.usSectionTop img {
+  width: 60%;
+  padding-top: 20px; }
 
-.usSectionTop img{
-    width: 60%;
-    padding-top: 20px;
-}
+.usSectionBottom iframe {
+  width: 60%;
+  padding-top: 20px; }
 
-.usSectionBottom iframe{
-    width: 60%;
-    padding-top: 20px;
-}
-
-.carousel-inner{
-    height: 600px;
-}
+.carousel-inner {
+  height: 600px; }
 
 /*Contacto*/
+.contactTitle {
+  padding-top: 2rem;
+  text-align: center; }
 
-.contactTitle{
-    padding-top: 2rem;
-    text-align: center;
-}
-
-.map{
-    max-width: 100%;
-}
+.map {
+  max-width: 100%; }
 
 /*Carrito*/
+.shopSectionTop form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
 
-.shopSectionTop form{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-.shopSectionBottom{
-    text-align: center;
-}
-
-.shopSectionBottom img{
+.shopSectionBottom {
+  text-align: center; }
+  .shopSectionBottom img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    padding-top: 1rem;
-}
+    width: 60%;
+    padding-top: 1rem; }
 
-
-.accordion{
-    color: black;
-}
+.accordion {
+  color: black; }
 
 /*MEDIA QUERIES*/
-
 @media screen and (max-width: 768px) {
+  .gridCatalog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "titulo titulo" "vino1 vino2" "vino3 vino4" "vino5 vino6" "vino7 vino8" "vino9 vino10" "vino11 vino12";
+    justify-items: center;
+    gap: 20px; }
+  .menuHeader ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: small; }
+  .homeSectionTop, .homeSectionBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: small; }
+  .homeImg, .divMain {
+    width: 100%; }
+  .contactDirection {
+    padding-right: 2rem; } }
 
-    .gridCatalog{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "titulo titulo"
-                             "vino1 vino2"
-                             "vino3 vino4"
-                             "vino5 vino6"
-                             "vino7 vino8"
-                             "vino9 vino10"
-                             "vino11 vino12";
-        justify-items: center;
-        gap: 20px;
-    }
-
-    .menuHeader ul{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: small;
-    }
-
-    .homeSectionTop, .homeSectionBottom{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: small;
-    }
-
-    .homeImg, .divMain{
-        width: 100%;
-    }
-
-    .contactDirection{
-        padding-right: 2rem;
-    }
-
-    @media screen and (max-width: 600px) {
-        .gridCatalog{
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-areas: "titulo"
-                                 "vino1"
-                                 "vino2"
-                                 "vino3"
-                                 "vino4"
-                                 "vino5"
-                                 "vino6"
-                                 "vino7"
-                                 "vino8"
-                                 "vino9"
-                                 "vino10"
-                                 "vino11"
-                                 "vino12";
-            justify-items: center;
-            gap: 20px;
-        }
-        
-        .homeSectionTop, .homeSectionBottom{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: smaller;
-        }
-    }    
-
-}
+@media screen and (max-width: 768px) and (max-width: 600px) {
+  .gridCatalog {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "titulo" "vino1" "vino2" "vino3" "vino4" "vino5" "vino6" "vino7" "vino8" "vino9" "vino10" "vino11" "vino12";
+    justify-items: center;
+    gap: 20px; }
+  .homeSectionTop, .homeSectionBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: smaller; } }
