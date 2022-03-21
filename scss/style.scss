@@ -7,14 +7,35 @@
     margin:0;
  }
 
+
+/*Aplicacion de Mixin para estilos flexbox*/ 
+
+@mixin flexRow {
+    display:flex;
+    flex-direction: row;
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Aplicacion de Extend para estilo base de Contenedor, según el producto eljo otro color*/
+
+.card{
+    align-items: center;
+    text-align: center;
+}
+
+
+
+/*Main*/
+
  main{
     color: $FontSecondaryColor;
     background-color: $mainColor;
     font-family: $fontStyle;
 }
-
-
-/*Main*/
 
 section{
     padding: 5%;
@@ -23,9 +44,8 @@ section{
 /*Index*/
 
 .homeSectionTop{
-    display:flex;
-    flex-direction: row;
-
+    @include flexRow;
+    
     & .homeImg, .divMain{
         width: 45%;
         height: fit-content;
@@ -35,7 +55,7 @@ section{
 }
 
 
-/*Catalog*/
+/*Catalogo*/
 
 .gridCatalog{
     display: grid;
@@ -54,17 +74,21 @@ section{
         margin: 20px;
     }
 
-    & .card{
+    & .card--Malbec{
+        @extend.card;      
         background-color:$SecondColor;
-        align-items: center;
-        text-align: center;
     }
+
+    & .card--Blanco{
+        @extend.card;  
+        background-color:#d1b256;
+    }
+
 
 }
 
 .proximosIngresos{
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     text-align: center;
     padding: 5%;
 
@@ -79,8 +103,7 @@ section{
 /*Nosotros*/
 
 .usSectionTop, .usSectionBottom{
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     padding: 5%;
 }
 
@@ -112,8 +135,7 @@ section{
 /*Carrito*/
 
 .shopSectionTop form{
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     width: 30%;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -154,16 +176,14 @@ section{
     }
 
     .menuHeader ul{
-        display: flex;
-        flex-direction: column;
+        @include flexColumn;
         justify-content: center;
         align-items: center;
         font-size: small;
     }
 
     .homeSectionTop, .homeSectionBottom{
-        display: flex;
-        flex-direction: column;
+        @include flexColumn;
         justify-content: center;
         align-items: center;
         font-size: small;
@@ -199,8 +219,7 @@ section{
         }
         
         .homeSectionTop, .homeSectionBottom{
-            display: flex;
-            flex-direction: column;
+            @include flexColumn;
             justify-content: center;
             align-items: center;
             font-size: smaller;

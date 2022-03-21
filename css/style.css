@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* aca voy a ir poniendo los colores, medidas o cosas que se repiten */
 /*Colours*/
 /*Fonts*/
@@ -66,12 +67,18 @@ footer {
   padding: 0;
   margin: 0; }
 
+/*Aplicacion de Mixin para estilos flexbox*/
+/*Aplicacion de Extend para estilo base de Contenedor, según el producto eljo otro color*/
+.card, .gridCatalog .card--Malbec, .gridCatalog .card--Blanco {
+  align-items: center;
+  text-align: center; }
+
+/*Main*/
 main {
   color: white;
   background-color: #4c1130;
   font-family: "Lato", sans-serif; }
 
-/*Main*/
 section {
   padding: 5%; }
 
@@ -84,7 +91,7 @@ section {
     height: fit-content;
     padding: 1rem; }
 
-/*Catalog*/
+/*Catalogo*/
 .gridCatalog {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -95,10 +102,10 @@ section {
     grid-area: titulo;
     text-align: center;
     margin: 20px; }
-  .gridCatalog .card {
-    background-color: #a64d79;
-    align-items: center;
-    text-align: center; }
+  .gridCatalog .card--Malbec {
+    background-color: #a64d79; }
+  .gridCatalog .card--Blanco {
+    background-color: #d1b256; }
 
 .proximosIngresos {
   display: flex;
