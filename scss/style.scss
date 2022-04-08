@@ -112,9 +112,10 @@ section{
     padding-top: 20px;
 }
 
-.usSectionBottom iframe{
-    width: 60%;
-    padding-top: 20px;
+.usSectionBottom h2, .video{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
 }
 
 .carousel-inner{
@@ -128,17 +129,18 @@ section{
     text-align: center;
 }
 
+.contactSectionBottom{
+    width: 50%;
+}
+
 .map{
     max-width: 100%;
 }
 
 /*Carrito*/
 
-.shopSectionTop form{
-    @include flexColumn;
-    width: 30%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+.shopSectionTop{
+    width: 50%;
 }
 
 .shopSectionBottom{
@@ -153,8 +155,15 @@ section{
     }
 }
 
+.envios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .accordion{
     color: black;
+    width: 100%;
 }
 
 /*MEDIA QUERIES*/
@@ -218,7 +227,14 @@ section{
             gap: 20px;
         }
         
-        .homeSectionTop, .homeSectionBottom{
+        .homeSectionTop{
+            @include flexRow;
+            justify-content: center;
+            align-items: center;
+            font-size: smaller;
+        }
+
+        .homeSectionBottom{
             @include flexColumn;
             justify-content: center;
             align-items: center;

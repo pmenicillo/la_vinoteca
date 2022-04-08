@@ -126,9 +126,10 @@ section {
   width: 60%;
   padding-top: 20px; }
 
-.usSectionBottom iframe {
-  width: 60%;
-  padding-top: 20px; }
+.usSectionBottom h2, .video {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5%; }
 
 .carousel-inner {
   height: 600px; }
@@ -138,16 +139,15 @@ section {
   padding-top: 2rem;
   text-align: center; }
 
+.contactSectionBottom {
+  width: 50%; }
+
 .map {
   max-width: 100%; }
 
 /*Carrito*/
-.shopSectionTop form {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  padding-top: 1rem;
-  padding-bottom: 1rem; }
+.shopSectionTop {
+  width: 50%; }
 
 .shopSectionBottom {
   text-align: center; }
@@ -158,8 +158,14 @@ section {
     width: 60%;
     padding-top: 1rem; }
 
+.envios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
 .accordion {
-  color: black; }
+  color: black;
+  width: 100%; }
 
 /*MEDIA QUERIES*/
 @media screen and (max-width: 768px) {
@@ -193,7 +199,13 @@ section {
     grid-template-areas: "titulo" "vino1" "vino2" "vino3" "vino4" "vino5" "vino6" "vino7" "vino8" "vino9" "vino10" "vino11" "vino12";
     justify-items: center;
     gap: 20px; }
-  .homeSectionTop, .homeSectionBottom {
+  .homeSectionTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: smaller; }
+  .homeSectionBottom {
     display: flex;
     flex-direction: column;
     justify-content: center;
