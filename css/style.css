@@ -190,7 +190,9 @@ section {
   .homeImg, .divMain {
     width: 100%; }
   .contactDirection {
-    padding-right: 2rem; } }
+    padding-right: 2rem; }
+  .carousel-inner {
+    height: 10%; } }
 
 @media screen and (max-width: 768px) and (max-width: 600px) {
   .gridCatalog {
@@ -210,4 +212,6 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: smaller; } }
+    font-size: smaller; }
+  .carousel-inner {
+    height: 10%; } }

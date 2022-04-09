@@ -206,6 +206,10 @@ section{
         padding-right: 2rem;
     }
 
+    .carousel-inner{
+        height: 10%;
+    }
+
     @media screen and (max-width: 600px) {
         .gridCatalog{
             display: grid;
@@ -239,6 +243,10 @@ section{
             justify-content: center;
             align-items: center;
             font-size: smaller;
+        }
+
+        .carousel-inner{
+            height: 10%;
         }
     }    
 
